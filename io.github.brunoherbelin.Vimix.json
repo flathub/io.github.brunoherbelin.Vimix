@@ -172,8 +172,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "tag": "0.8.2c",
-                    "commit": "9b639728787ebb39008a49b404e76538f74a89b1",
+                    "tag": "0.8.2d",
+                    "commit": "5051f4e38c3e3456b2141704c21c31d48071bc1e",
                     "url": "https://github.com/brunoherbelin/vimix.git"
                 }
             ]
