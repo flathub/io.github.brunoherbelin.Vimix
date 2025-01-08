@@ -6,8 +6,9 @@
     "command": "vimix",
     "rename-desktop-file": "vimix.desktop",
     "rename-icon": "vimix",
-    "finish-args": [
-        "--socket=x11",
+    "finish-args": [        
+        "--socket=wayland",
+        "--socket=fallback-x11",
         "--share=ipc",
         "--share=network",
         "--device=dri",
