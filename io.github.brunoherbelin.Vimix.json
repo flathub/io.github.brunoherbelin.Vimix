@@ -3,7 +3,7 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
-    "command": "vimix",
+    "command": "launch_vimix.sh",
     "rename-desktop-file": "vimix.desktop",
     "rename-icon": "vimix",
     "finish-args": [        
@@ -174,8 +174,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "tag": "0.8.4",
-                    "commit": "24eec2687cfa61e92b8971a25d0ec7970d804812",
+                    "tag": "0.8.4b",
+                    "commit": "8048e91117561f879916392c7f036f962af138cb",
                     "url": "https://github.com/brunoherbelin/vimix.git"
                 }
             ]
