@@ -1,14 +1,14 @@
 {
     "app-id": "io.github.brunoherbelin.Vimix",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "25.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "launch_vimix.sh",
     "rename-desktop-file": "vimix.desktop",
     "rename-icon": "vimix",
     "finish-args": [        
-        "--socket=wayland",
-        "--socket=fallback-x11",
+        "--socket=x11",
+        "--socket=pulseaudio",
         "--share=ipc",
         "--share=network",
         "--device=dri",
@@ -49,36 +49,6 @@
             ]
         },
         {
-            "name": "x264",
-            "config-opts": [
-                "--enable-shared"
-            ],
-            "sources": [
-            {
-                "type": "git",
-                "commit": "373697b467f7cd0af88f1e9e32d4f10540df4687",
-                "url": "https://code.videolan.org/videolan/x264.git"
-            }
-            ]
-        },
-        {
-            "name": "x265",
-            "buildsystem": "cmake-ninja",
-            "subdir": "source",
-            "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
-            ],
-            "sources": [
-            {
-                "type": "git",
-                "tag": "4.1",
-                "commit": "1d117bed4747758b51bd2c124d738527e30392cb",
-                "url": "https://bitbucket.org/multicoreware/x265_git.git"
-            }
-            ]
-        },
-        {
             "name": "srt",
             "buildsystem": "cmake-ninja",
             "config-opts": [
@@ -111,42 +81,6 @@
             ]
         },
         {
-            "name": "gstreamer",
-            "buildsystem": "meson",
-            "builddir": true,
-            "config-opts": [
-               "-Ddoc=disabled",
-               "-Dpython=disabled",
-               "-Dges=disabled",
-               "-Drs=disabled",
-               "-Dgst-examples=disabled",
-               "-Drtsp_server=disabled",
-               "-Ddevtools=disabled",
-               "-Dqt5=disabled",
-               "-Dlibav=enabled",
-               "-Dbase=enabled",
-               "-Dgood=enabled",
-               "-Dgst-plugins-good:v4l2=enabled",
-               "-Dgpl=enabled",
-               "-Dbad=enabled",
-               "-Dgst-plugins-bad:x265=enabled",
-               "-Dgst-plugins-bad:srt=enabled",
-               "-Dgst-plugins-bad:shm=enabled",
-               "-Dugly=enabled",
-               "-Dgst-plugins-ugly:x264=enabled",
-               "-Dvaapi=enabled"
-            ],
-            "sources": [
-              {
-                "type": "git",
-                "tag": "1.24.10",
-                "commit": "5be4b6f03689ab438822f6cfcd13f1f300afe203",
-                "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
-                "disable-submodules": false
-              }
-            ]
-        },
-        {
             "name": "shmdata",
             "buildsystem": "cmake-ninja",
             "config-opts": [
@@ -174,8 +108,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "tag": "0.8.4b",
-                    "commit": "8048e91117561f879916392c7f036f962af138cb",
+                    "tag": "0.8.5b",
+                    "commit": "4b8730e2a68d87d39590386e170b12f6d52d6778",
                     "url": "https://github.com/brunoherbelin/vimix.git"
                 }
             ]
