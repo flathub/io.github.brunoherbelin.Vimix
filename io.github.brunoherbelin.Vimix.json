@@ -9,13 +9,17 @@
     "finish-args": [
         "--socket=x11",
         "--socket=pulseaudio",
+        "--system-talk-name=org.freedesktop.Avahi",
         "--share=ipc",
         "--share=network",
         "--device=dri",
         "--device=shm",
         "--device=all",
-        "--filesystem=host",
-        "--filesystem=/tmp",
+        "--filesystem=home",
+        "--filesystem=/run/media",
+        "--filesystem=/media",
+        "--filesystem=xdg-run/vimix:create",
+        "--persist=.config/vimix",
         "--talk-name=org.gtk.vfs.*",
         "--env=FREI0R_PATH=/app/lib/frei0r-1"
     ],
@@ -108,8 +112,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "tag": "0.9.0",
-                    "commit": "320ab8b0a1b3f5ae4d8be9c6d5987ed6cabfdd81",
+                    "tag": "0.9.1",
+                    "commit": "bbec275b022bb4395db4b84d711a98a38a99640b",
                     "url": "https://github.com/brunoherbelin/vimix.git"
                 }
             ]
